@@ -5,7 +5,7 @@
       <div class="body">
         <h1 class="h1 h1--red">{{ title }}</h1>
         <p class="subtitle">{{ subtitle }}</p>
-        <BaseButton class="btn" nativeLink href="#food">За вкусной едой</BaseButton>
+        <BaseButton class="btn" nativeLink href="#food">{{ btnTitle }}</BaseButton>
       </div>
     </div>
     <video class="video" :src="video.url" autoplay muted loop></video>
@@ -27,6 +27,10 @@
     video: {
       required: true,
       type: Object,
+    },
+    btnTitle: {
+      required: true,
+      type: String,
     }
   });
 </script>

@@ -4,13 +4,12 @@
       v-if="home"
       :title="home.zagolovok"
       :subtitle="home.podzagolovok"
+      :btnTitle="home.tekst_na_knopke"
       :video="{
         url: home.video.url,
       }"
     />
-    <div class="wrapper">
-      <pre>{{ home }}</pre>
-    </div>
+    <SectionRestaurants />
     <Footer
       v-if="home"
       :phone="home.phone"
@@ -23,6 +22,7 @@
 
 <script setup>
   import SectionMain from './SectionMain.vue';
+  import SectionRestaurants from './SectionRestaurants.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
 

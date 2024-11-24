@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer id="contacts" class="footer">
     <div class="wrapper">
       <div class="wrap">
         <div class="col1">
@@ -12,21 +12,24 @@
         <div class="col2">
           <nav class="nav">
             <div>
-              <a class="link" href="#">О нас</a>
+              <a class="link" href="#about">О нас</a>
             </div>
             <div>
-              <a class="link" href="#">Кафе и рестораны</a>
+              <a class="link" href="#food">Кафе и рестораны</a>
             </div>
             <div>
-              <a class="link" href="#">Мероприятия</a>
+              <a class="link" href="#activities">Мероприятия</a>
             </div>
             <div>
-              <a class="link" href="#">Контакты</a>
+              <a class="link" href="#promotions">Акции</a>
+            </div>
+            <div>
+              <a class="link" href="#contacts">Контакты</a>
             </div>
           </nav>
         </div>
         <div class="col3">
-          <a class="link phone" href="#">{{ phone }}</a>
+          <a class="link phone" :href="`tel:${phone}`">{{ phone }}</a>
           <div class="text">{{ workTime }}</div>
         </div>
       </div>

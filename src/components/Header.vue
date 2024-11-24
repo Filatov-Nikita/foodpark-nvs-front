@@ -3,16 +3,16 @@
     <div class="wrapper">
       <div class="wrap">
         <div class="nav">
-          <a class="link" href="#">О нас</a>
-          <a class="link" href="#">Кафе и рестораны</a>
+          <a class="link" href="#about">О нас</a>
+          <a class="link" href="#food">Кафе и рестораны</a>
         </div>
         <a class="logo-wrap" href="/">
           <img class="logo" width="250" height="64" src="@/assets/images/logo.svg" alt="лого фудпарка">
         </a>
         <div class="nav">
-          <a class="link" href="#">Мероприятия</a>
-          <a class="link" href="#">Акции</a>
-          <a class="link" href="#">Контакты</a>
+          <a class="link" href="#activities">Мероприятия</a>
+          <a class="link" href="#promotions">Акции</a>
+          <a class="link" href="#contacts">Контакты</a>
         </div>
       </div>
     </div>
