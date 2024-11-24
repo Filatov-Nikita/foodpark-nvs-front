@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "ky": "^1.7.2",
+    "swiper": "^11.1.15",
     "vue": "^3.5.12"
   },
   "devDependencies": {
