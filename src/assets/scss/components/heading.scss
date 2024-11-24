@@ -1,0 +1,28 @@
+h1, .h1 {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.1;
+  @apply tw-tracking-1 tw-font-if-kica tw-uppercase;
+
+  &--red {
+    text-shadow: 0 1px 20px #ff9ed9;
+    @apply tw-text-white;
+  }
+}
+
+h2, .h2 {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 1.3;
+  @apply tw-font-if-kica tw-uppercase;
+
+  &--red {
+    text-shadow: 0 1px 20px #ff9ed9;
+    @apply tw-text-primary;
+  }
+
+  &--green {
+    text-shadow: 0 1px 20px #e8ff8e;
+    @apply tw-text-secondary;
+  }
+}

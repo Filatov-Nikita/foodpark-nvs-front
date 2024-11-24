@@ -17,6 +17,9 @@ export default {
       'if-kica': [ 'if kica', 'Arial', 'sans-serif' ],
       'montserrat': [ 'montserrat', 'Arial', 'sans-serif' ],
     },
+    letterSpacing: {
+      '1': '0.01em',
+    },
   },
   plugins: [],
 }
