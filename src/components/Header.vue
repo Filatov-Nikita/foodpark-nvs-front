@@ -1,16 +1,20 @@
 <template>
   <header class="header">
-    <div class="nav">
-      <a class="link" href="#">О нас</a>
-      <a class="link" href="#">Кафе и рестораны</a>
-    </div>
-    <a class="logo-wrap" href="/">
-      <img class="logo" width="250" height="64" src="@/assets/images/logo.svg" alt="лого фудпарка">
-    </a>
-    <div class="nav">
-      <a class="link" href="#">Мероприятия</a>
-      <a class="link" href="#">Акции</a>
-      <a class="link" href="#">Контакты</a>
+    <div class="wrapper">
+      <div class="wrap">
+        <div class="nav">
+          <a class="link" href="#">О нас</a>
+          <a class="link" href="#">Кафе и рестораны</a>
+        </div>
+        <a class="logo-wrap" href="/">
+          <img class="logo" width="250" height="64" src="@/assets/images/logo.svg" alt="лого фудпарка">
+        </a>
+        <div class="nav">
+          <a class="link" href="#">Мероприятия</a>
+          <a class="link" href="#">Акции</a>
+          <a class="link" href="#">Контакты</a>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -21,8 +25,11 @@
 
 <style scoped lang="scss">
   .header {
-    padding: 16px 30px;
+    padding: 16px 0;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
