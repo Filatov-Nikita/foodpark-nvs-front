@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
   import Header from './Header.vue';
 
   defineProps({

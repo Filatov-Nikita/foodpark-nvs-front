@@ -10,6 +10,7 @@
       }"
     />
     <SectionRestaurants />
+    <SectionSubscribe :tgHref="home.ssylka_na_telegram" />
     <Footer
       v-if="home"
       :phone="home.phone"
@@ -23,6 +24,7 @@
 <script setup>
   import SectionMain from './SectionMain.vue';
   import SectionRestaurants from './SectionRestaurants.vue';
+  import SectionSubscribe from './SectionSubscribe.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
 
