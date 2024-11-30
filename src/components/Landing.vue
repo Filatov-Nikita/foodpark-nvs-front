@@ -9,6 +9,7 @@
         url: home.video.url,
       }"
     />
+    <SectionAbout />
     <SectionRestaurants />
     <SectionSubscribe :tgHref="home.ssylka_na_telegram" />
     <Footer
@@ -25,6 +26,7 @@
   import SectionMain from './SectionMain.vue';
   import SectionRestaurants from './SectionRestaurants.vue';
   import SectionSubscribe from './SectionSubscribe.vue';
+  import SectionAbout from './SectionAbout.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
 
