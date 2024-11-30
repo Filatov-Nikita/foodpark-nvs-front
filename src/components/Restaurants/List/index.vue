@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="rest-items">
     <Item
+      class="rest-item"
       v-for="item in items"
       :key="item.id"
       :item="item"
@@ -18,3 +19,16 @@
     }
   });
 </script>
+
+<style scoped lang="scss">
+  .rest-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px -10px;
+  }
+
+  .rest-item {
+    width: calc(33.3% - 20px);
+    margin: 15px 10px;
+  }
+</style>

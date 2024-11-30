@@ -1,6 +1,8 @@
-body {
-  font-size: 16px;
-  line-height: 1.25;
-  background-color: #FFFAEF;
-  @apply tw-font-montserrat tw-text-dark;
+@layer base {
+  body {
+    font-size: 16px;
+    line-height: 1.25;
+    background-color: #FFFAEF;
+    @apply tw-font-montserrat tw-text-dark;
+  }
 }
