@@ -11,6 +11,7 @@
       }"
     />
     <SectionAbout class="about-sec" />
+    <SectionBadges class="badges-sec" />
     <SectionRestaurants class="rest-sec" />
     <SectionSubscribe class="subs-sec" :tgHref="home.ssylka_na_telegram" />
     <Footer
@@ -28,6 +29,7 @@
   import SectionRestaurants from './SectionRestaurants.vue';
   import SectionSubscribe from './SectionSubscribe.vue';
   import SectionAbout from './SectionAbout.vue';
+  import SectionBadges from './SectionBadges.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
 
@@ -49,5 +51,9 @@
 
   .subs-sec {
     margin-bottom: 180px;
+  }
+
+  .badges-sec {
+    margin-bottom: 100px;
   }
 </style>
