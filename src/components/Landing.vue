@@ -1,6 +1,7 @@
 <template>
   <main>
     <SectionMain
+      class="main-sec"
       v-if="home"
       :title="home.zagolovok"
       :subtitle="home.podzagolovok"
@@ -9,9 +10,9 @@
         url: home.video.url,
       }"
     />
-    <SectionAbout />
-    <SectionRestaurants />
-    <SectionSubscribe :tgHref="home.ssylka_na_telegram" />
+    <SectionAbout class="about-sec" />
+    <SectionRestaurants class="rest-sec" />
+    <SectionSubscribe class="subs-sec" :tgHref="home.ssylka_na_telegram" />
     <Footer
       v-if="home"
       :phone="home.phone"
@@ -34,5 +35,19 @@
 </script>
 
 <style scoped lang="scss">
+  .main-sec {
+    margin-bottom: 120px;
+  }
 
+  .about-sec {
+    margin-bottom: 100px;
+  }
+
+  .rest-sec {
+    margin-bottom: 180px;
+  }
+
+  .subs-sec {
+    margin-bottom: 180px;
+  }
 </style>
