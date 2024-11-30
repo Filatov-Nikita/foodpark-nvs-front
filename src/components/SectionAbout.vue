@@ -1,7 +1,7 @@
 <template>
   <section id="about">
     <div class="wrapper">
-      <h2 class="h2 h2--green tw-text-center">Главный гастрономический центр</h2>
+      <h2 class="h2 h2--green tw-text-center">Главный гастрономический центр города</h2>
       <AboutActions class="actions" />
     </div>
   </section>
