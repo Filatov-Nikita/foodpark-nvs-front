@@ -11,7 +11,6 @@ const app = createApp(App);
 
 app.component('BaseButton', BaseButton);
 app.component('BaseBadge', BaseBadge);
-app.component('BaseButton', BaseButton);
 app.component('Swiper', Swiper);
 app.component('SwiperSlide', SwiperSlide);
 

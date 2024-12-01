@@ -13,6 +13,7 @@
     <SectionAbout class="about-sec" />
     <SectionBadges class="badges-sec" />
     <SectionRestaurants class="rest-sec" />
+    <SectionPromotions class="prom-sec" />
     <SectionSubscribe class="subs-sec" :tgHref="home.ssylka_na_telegram" />
     <Footer
       v-if="home"
@@ -30,6 +31,7 @@
   import SectionSubscribe from './SectionSubscribe.vue';
   import SectionAbout from './SectionAbout.vue';
   import SectionBadges from './SectionBadges.vue';
+  import SectionPromotions from './SectionPromotions.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
 
@@ -55,5 +57,9 @@
 
   .badges-sec {
     margin-bottom: 100px;
+  }
+
+  .prom-sec {
+    margin-bottom: 170px;
   }
 </style>
