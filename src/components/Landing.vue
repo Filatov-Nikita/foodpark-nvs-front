@@ -12,6 +12,7 @@
     />
     <SectionAbout class="about-sec" />
     <SectionBadges class="badges-sec" />
+    <SectionPhotos class="photos-sec" />
     <SectionRestaurants class="rest-sec" />
     <SectionActivities class="activ-sec" />
     <SectionPromotions class="prom-sec" />
@@ -34,6 +35,7 @@
   import SectionBadges from './SectionBadges.vue';
   import SectionPromotions from './SectionPromotions.vue';
   import SectionActivities from './SectionActivities.vue';
+  import SectionPhotos from './SectionPhotos.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
 
@@ -67,5 +69,9 @@
 
   .activ-sec {
     margin-bottom: 150px;
+  }
+
+  .photos-sec {
+    margin-bottom: 180px;
   }
 </style>
