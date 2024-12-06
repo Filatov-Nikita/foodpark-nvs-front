@@ -33,11 +33,19 @@
     width: v-bind(size);
     height: v-bind(size);
 
+    &:hover {
+      opacity: 0.7;
+    }
+
     &--left {
       transform: rotate(-180deg);
     }
 
     &--disabled {
+      &:hover {
+        opacity: 1;
+      }
+
       .arrow {
         fill: #FFFAEF;
       }

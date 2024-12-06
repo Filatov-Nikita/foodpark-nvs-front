@@ -11,4 +11,7 @@ export default {
       }
     }).json();
   },
+  async show(activityId) {
+    return http.get(`activities/${activityId}`).json();
+  },
 }
