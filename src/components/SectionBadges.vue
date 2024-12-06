@@ -1,33 +1,38 @@
 <template>
   <section id="badges" class="badges">
     <div class="wrapper">
-      <div class="row-items">
-        <BaseBadge
-          class="item"
-          v-for="item in row1Items"
-          :textColor="item.textColor"
-          :color="item.color"
-          :design="item.design"
-        >
-          {{ item.text }}
-        </BaseBadge>
-      </div>
-      <div class="row-items">
-        <BaseBadge
-          class="item"
-          v-for="item in row2Items"
-          :textColor="item.textColor"
-          :color="item.color"
-          :design="item.design"
-        >
-          {{ item.text }}
-        </BaseBadge>
+      <div class="rows" ref="rowsRef">
+        <div ref="row1Ref" class="row-items row1" :style="{ '--x': x1 + 'px' }">
+          <BaseBadge
+            class="item"
+            v-for="item in row1Items"
+            :textColor="item.textColor"
+            :color="item.color"
+            :design="item.design"
+          >
+            {{ item.text }}
+          </BaseBadge>
+        </div>
+        <div ref="row2Ref" class="row-items row2" :style="{ '--x': x2 + 'px' }">
+          <BaseBadge
+            class="item"
+            v-for="item in row2Items"
+            :textColor="item.textColor"
+            :color="item.color"
+            :design="item.design"
+          >
+            {{ item.text }}
+          </BaseBadge>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+  import useMoveBadges from '@/composables/useMoveBadges';
+  import { ref } from 'vue';
+
   const colorBlack = '#222222';
   const colorWhite = '#ffffff';
 
@@ -144,6 +149,12 @@
       design: 'filled',
     },
   ];
+
+  const row1Ref = ref(null);
+  const row2Ref = ref(null);
+  const rowsRef = ref(null);
+
+  const { x1, x2 } = useMoveBadges(row1Ref, row2Ref, rowsRef);
 </script>
 
 <style scoped lang="scss">
@@ -152,6 +163,7 @@
   }
 
   .row-items {
+    width: max-content;
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
@@ -163,5 +175,9 @@
 
   .item {
     flex-shrink: 0;
+  }
+
+  .row1, .row2 {
+    transform: translateX(var(--x));
   }
 </style>
