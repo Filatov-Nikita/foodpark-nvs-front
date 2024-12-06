@@ -6,6 +6,7 @@ import BaseBadge from '@/components/Base/Badge.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'animate.css';
 
 const app = createApp(App);
 
