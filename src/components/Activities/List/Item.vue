@@ -1,6 +1,6 @@
 <template>
-  <article>
-    <div class="img-wrap">
+  <article class="item">
+    <div class="img-wrap" @click="$emit('changed:item')">
       <img class="photo" width="890" height="718" src="@/assets/images/event.jpg" />
     </div>
     <div class="body-wrap">
@@ -17,15 +17,29 @@
       type: Object,
     }
   });
+
+  defineEmits([ 'changed:item' ]);
 </script>
 
 <style scoped lang="scss">
+  .item {
+    &:hover .title {
+      opacity: 0.7;
+    }
+
+    &:hover .photo {
+      transform: scale(1.1);
+    }
+  }
+
   .img-wrap {
+    cursor: pointer;
     border-radius: 30px;
     overflow: hidden;
   }
 
   .photo {
+    transition: transform 150ms;
     width: 100%;
   }
 

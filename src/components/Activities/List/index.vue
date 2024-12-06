@@ -18,7 +18,7 @@
         v-for="item in items"
         :key="item.ID"
       >
-        <ListItem :item="item" />
+        <ListItem :item="item" @changed:item="$emit('changed:item', item.ID)" />
       </SwiperSlide>
       <template #container-start>
         <div class="nav-actions" :class="{ 'tw-invisible': !canPrev && !canNext }">
@@ -42,6 +42,8 @@
       type: Array,
     }
   });
+
+  defineEmits([ 'changed:item' ]);
 
   const swiper = ref(null);
 
