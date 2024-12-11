@@ -15,7 +15,7 @@
     >
       <SwiperSlide
         v-for="item in items"
-        :key="item.slug"
+        :key="item.id"
       >
         <PromoItem :item="item" />
       </SwiperSlide>

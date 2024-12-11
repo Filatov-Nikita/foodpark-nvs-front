@@ -16,9 +16,9 @@
     >
       <SwiperSlide
         v-for="item in items"
-        :key="item.ID"
+        :key="item.id"
       >
-        <ListItem :item="item" @changed:item="$emit('changed:item', item.ID)" />
+        <ListItem :item="item" @changed:item="$emit('changed:item', item.id)" />
       </SwiperSlide>
       <template #container-start>
         <div class="nav-actions" :class="{ 'tw-invisible': !canPrev && !canNext }">

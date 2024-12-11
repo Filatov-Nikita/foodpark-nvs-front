@@ -1,7 +1,7 @@
 <template>
   <article class="item">
-    <div v-if="item.image" class="img-wrap">
-      <img class="photo" :width="item.image[1]" :height="item.image[2]" :src="item.image[0]" />
+    <div class="img-wrap">
+      <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" />
     </div>
     <div class="body-wrap">
       <h3 class="title">{{ item.title }}</h3>

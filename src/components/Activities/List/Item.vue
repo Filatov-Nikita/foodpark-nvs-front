@@ -1,7 +1,7 @@
 <template>
   <article class="item">
     <div class="img-wrap" @click="$emit('changed:item')">
-      <img class="photo" width="890" height="718" src="@/assets/images/event.jpg" />
+      <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" />
     </div>
     <div class="body-wrap">
       <p class="date">{{ item.post_date }}</p>

@@ -6,7 +6,7 @@
       </div>
       <div class="content">
         <div class="img-wrap">
-          <img width="890" height="718" src="@/assets/images/event.jpg" />
+          <img class="tw-w-full" :width="data.image.width" :height="data.image.height" :src="data.image.url" />
         </div>
         <p class="period">{{ data.period }}</p>
         <p class="title">{{ data.title }}</p>

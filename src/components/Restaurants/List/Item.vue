@@ -1,9 +1,9 @@
 <template>
   <article class="item">
     <div class="img-wrap">
-      <img width="890" height="712" class="photo" src="@/assets/images/rest.jpg" loading="lazy" />
+      <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" loading="lazy" />
       <div class="logo-wrap">
-        <img width="75" height="75" class="logo" src="@/assets/images/rest-logo.svg" loading="lazy">
+        <img class="logo" :width="item.logo.width" :height="item.logo.height" :src="item.logo.url" loading="lazy">
       </div>
     </div>
     <div class="body">
