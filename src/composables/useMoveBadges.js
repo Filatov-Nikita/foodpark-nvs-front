@@ -13,7 +13,7 @@ export default function(row1Ref, row2Ref, rowsRef) {
     window.removeEventListener('scroll', tScroll);
   });
 
-  const tScroll = throttle(10, onScroll);
+  const tScroll = throttle(1000 / 60, onScroll);
 
   function start() {
     x1.value = 0;
@@ -29,14 +29,15 @@ export default function(row1Ref, row2Ref, rowsRef) {
       window.scrollY > rowsRef.value.offsetTop + rowsRef.value.offsetHeight
     ) return;
 
-    if(x2.value >= row2Ref.value.offsetWidth) return;
 
     let step = row2Ref.value.offsetWidth / (rowsRef.value.offsetHeight + window.screenY);
 
     if(window.scrollY > prevScrollY) {
+      if(x2.value >= row2Ref.value.offsetWidth) return;
       x1.value -= step;
       x2.value += step;
     } else {
+      if(x1.value > 0) return;
       x1.value += step;
       x2.value -= step;
     }
