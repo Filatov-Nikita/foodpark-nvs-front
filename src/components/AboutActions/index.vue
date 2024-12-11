@@ -1,13 +1,22 @@
 <template>
   <div class="items">
-    <ActionItem class="action-item" />
-    <ActionItem class="action-item" />
-    <ActionItem class="action-item" />
+    <ActionItem
+      class="action-item"
+      v-for="item in items"
+      :item="item"
+    />
   </div>
 </template>
 
 <script setup>
   import ActionItem from './Item.vue';
+
+  defineProps({
+    items: {
+      required: true,
+      type: Array,
+    },
+  });
 </script>
 
 <style scoped>

@@ -10,7 +10,7 @@
         url: home.video.url,
       }"
     />
-    <SectionAbout class="about-sec" />
+    <SectionAbout class="about-sec" :title="home.banner_zagolovok" :items="home.banners" />
     <SectionBadges class="badges-sec" />
     <SectionPhotos class="photos-sec" />
     <SectionRestaurants class="rest-sec" />

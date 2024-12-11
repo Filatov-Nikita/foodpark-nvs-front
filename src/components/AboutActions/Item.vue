@@ -1,14 +1,19 @@
 <template>
   <a class="item" href="#food">
     <div class="img-wrap">
-      <img class="photo" width="968" height="801" src="@/assets/images/about-item.jpg" loading="lazy" />
-      <div class="name">Атмосфера</div>
+      <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" loading="lazy" />
+      <div class="name">{{ item.title }}</div>
     </div>
   </a>
 </template>
 
 <script setup>
-
+  defineProps({
+    item: {
+      required: true,
+      type: Object,
+    },
+  });
 </script>
 
 <style scoped lang="scss">
