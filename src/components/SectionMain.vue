@@ -1,9 +1,9 @@
 <template>
   <div class="main">
-    <Header />
+    <Header :tgHref="tgHref" />
     <div class="wrapper">
       <div class="body">
-        <h1 class="h1 h1--red">{{ title }}</h1>
+        <h1 class="h1 h1--red" v-html="titleHtml"></h1>
         <p class="subtitle">{{ subtitle }}</p>
         <BaseButton class="btn" nativeLink href="#food">{{ btnTitle }}</BaseButton>
       </div>
@@ -13,9 +13,10 @@
 </template>
 
 <script setup>
+  import { computed } from 'vue';
   import Header from './Header.vue';
 
-  defineProps({
+  const props = defineProps({
     title: {
       required: true,
       type: String,
@@ -31,7 +32,15 @@
     btnTitle: {
       required: true,
       type: String,
-    }
+    },
+    tgHref: {
+      required: true,
+      type: String,
+    },
+  });
+
+  const titleHtml = computed(() => {
+    return props.title.replace('-', '&#8209;');
   });
 </script>
 
@@ -43,6 +52,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 60px;
+
+    @include sm {
+      min-height: 530px;
+      padding-bottom: 30px;
+    }
 
     &::after {
       content: '';
@@ -73,6 +87,11 @@
     font-size: 20px;
     line-height: 1.3;
     @apply tw-text-white;
+
+    @include sm {
+      font-size: 16px;
+      margin-top: 12px;
+    }
   }
 
   .body {
@@ -83,5 +102,9 @@
     margin-top: 40px;
     width: 100%;
     max-width: 269px;
+
+    @include sm {
+      margin-top: 18px;
+    }
   }
 </style>

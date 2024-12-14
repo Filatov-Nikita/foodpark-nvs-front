@@ -6,6 +6,7 @@
       :title="home.zagolovok"
       :subtitle="home.podzagolovok"
       :btnTitle="home.tekst_na_knopke"
+      :tgHref="home.ssylka_na_telegram"
       :video="{
         url: home.video.url,
       }"

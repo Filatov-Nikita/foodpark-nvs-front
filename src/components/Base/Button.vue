@@ -37,6 +37,11 @@
     text-align: center;
     @apply tw-bg-primary tw-text-white tw-tracking-1 tw-uppercase;
 
+    @include sm {
+      padding: 12px 30px;
+      font-size: 14px;
+    }
+
     &:hover {
       background-color: #d50080;
     }
