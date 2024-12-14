@@ -1,5 +1,11 @@
+@use '../mixins/screens.scss' as *;
+
 .wrapper {
   max-width: 2560px;
   padding: 0 30px;
   margin: 0 auto;
+
+  @include sm {
+    padding: 0 16px;
+  }
 }
