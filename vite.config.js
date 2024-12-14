@@ -13,7 +13,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler',
-      }
+         additionalData: `@use "@/assets/scss/mixins/screens.scss" as *;`
+      },
     },
   },
   plugins: [vue()],
