@@ -46,33 +46,65 @@
 <style scoped lang="scss">
   .main-sec {
     margin-bottom: 120px;
+
+    @include sm {
+      margin-bottom: 80px;
+    }
   }
 
   .about-sec {
     margin-bottom: 100px;
+
+    @include sm {
+      margin-bottom: 50px;
+    }
   }
 
   .rest-sec {
     margin-bottom: 180px;
+
+    @include sm {
+      margin-bottom: 80px;
+    }
   }
 
   .subs-sec {
     margin-bottom: 180px;
+
+    @include sm {
+      margin-bottom: 40px;
+    }
   }
 
   .badges-sec {
     margin-bottom: 100px;
+
+    @include sm {
+      margin-bottom: 50px;
+    }
   }
 
   .prom-sec {
     margin-bottom: 170px;
+
+    @include sm {
+      margin-bottom: 80px;
+    }
   }
 
   .activ-sec {
     margin-bottom: 150px;
+
+    @include sm {
+      margin-bottom: 80px;
+    }
   }
 
   .photos-sec {
     margin-bottom: 180px;
+
+    @include sm {
+      margin-bottom: 80px;
+    }
   }
 </style>

@@ -49,6 +49,10 @@
       margin-bottom: 30px;
       word-wrap: break-word;
     }
+
+    @include xs {
+      max-width: 300px;
+    }
   }
 
   .text {
