@@ -30,5 +30,13 @@
   .rest-item {
     width: calc(33.3% - 20px);
     margin: 15px 10px;
+
+    @include md {
+      width: calc(50% - 20px);
+    }
+
+    @include sm {
+      width: calc(100% - 20px);
+    }
   }
 </style>

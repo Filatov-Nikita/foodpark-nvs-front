@@ -65,6 +65,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include sm {
+      width: 65px;
+      height: 65px;
+    }
   }
 
   .logo {
@@ -80,10 +85,19 @@
     font-size: 24px;
     line-height: 1.3;
     @apply tw-tracking-1;
+
+    @include sm {
+      font-size: 20px;
+    }
   }
 
   .kitchen-name {
     margin-top: 2px;
     @apply tw-text-gray;
+
+    @include sm {
+      margin-top: 4px;
+      font-size: 14px;
+    }
   }
 </style>
