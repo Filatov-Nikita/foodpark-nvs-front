@@ -31,6 +31,11 @@
         <div class="col3">
           <a class="link phone" :href="`tel:${phone}`">{{ phone }}</a>
           <div class="text">{{ workTime }}</div>
+          <div class="soc-items">
+            <a class="soc-item" :href="tgHref" target="_blank">
+              <TelegramRound />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -38,6 +43,8 @@
 </template>
 
 <script setup>
+  import TelegramRound from './Icons/TelegramRound.vue';
+
   defineProps({
     address: {
       required: true,
@@ -62,33 +69,65 @@
   .footer {
     padding-top: 40px;
     padding-bottom: 80px;
+
+    @include sm {
+      padding-bottom: 35px;
+    }
   }
 
   .wrap {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px;
+    margin: -15px -10px;
   }
 
   .col1 {
-    padding: 0 10px;
+    padding: 15px 10px;
     width: 32%;
+
+    @include lg {
+      width: 40%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
   }
 
   .col2 {
-    padding: 0 10px;
+    padding: 15px 10px;
     width: 21%;
+
+    @include lg {
+      width: 30%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
   }
 
   .col3 {
-    padding: 0 10px;
+    padding: 15px 10px;
     width: 47%;
+
+    @include lg {
+      width: 30%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
   }
 
   .nav {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include sm {
+      gap: 12px;
+    }
   }
 
   .text, .link {
@@ -106,13 +145,35 @@
   .logo-wrap {
     display: inline-block;
     margin-bottom: 35px;
+
+    @include sm {
+      margin-bottom: 20px;
+    }
   }
 
   .name, .phone {
     margin-bottom: 16px;
+
+    @include sm {
+      margin-bottom: 12px;
+    }
   }
 
   .phone {
     display: inline-block;
+  }
+
+  .soc-items {
+    margin-top: 16px;
+
+    @include sm {
+      margin-top: 12px;
+    }
+  }
+
+  .soc-item {
+    display: block;
+    width: 32px;
+    height: 32px;
   }
 </style>
