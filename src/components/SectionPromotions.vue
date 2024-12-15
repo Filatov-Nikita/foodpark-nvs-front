@@ -17,5 +17,9 @@
 <style scoped lang="scss">
   .prom-list {
     margin-top: 60px;
+
+    @include sm {
+      margin-top: 30px;
+    }
   }
 </style>

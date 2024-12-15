@@ -5,10 +5,10 @@
       :spaceBetween="16"
       :slidesPerView="1"
       :breakpoints="{
-        800: {
+        '992.9': {
           spaceBetween: 20,
           slidesPerView: 2,
-        }
+        },
       }"
       @swiper="onSwiper"
       @slideChange="onSliderChange"
@@ -21,8 +21,8 @@
       </SwiperSlide>
     </Swiper>
     <template v-if="canPrev || canNext">
-      <NavBtn class="left-btn" dir="left" :disabled="!canPrev" @click="prev" />
-      <NavBtn class="right-btn" dir="right" :disabled="!canNext" @click="next" />
+      <NavBtn class="left-btn" dir="left" :size="grid.md ? '60px' : '32px'" :disabled="!canPrev" @click="prev" />
+      <NavBtn class="right-btn" dir="right" :size="grid.md ? '60px' : '32px'" :disabled="!canNext" @click="next" />
     </template>
   </div>
 </template>
@@ -33,6 +33,7 @@
   import NavBtn from '@/components/Base/NavBtn.vue';
   import { onMounted, ref, watch } from 'vue';
   import useSwiperNav from '@/composables/useSwiperNav';
+  import useAppGrid from '@/composables/useAppGrid';
 
   defineProps({
     items: {
@@ -42,6 +43,7 @@
   });
 
   const screen = useScreen({}, 100);
+  const grid = useAppGrid();
 
   const promsRef = ref(null);
   const swiper = ref(null);
@@ -87,6 +89,10 @@
     max-width: 63%;
     margin-left: auto;
     margin-right: auto;
+
+    @include sm {
+      max-width: 75%;
+    }
   }
 
   .left-btn, .right-btn {
