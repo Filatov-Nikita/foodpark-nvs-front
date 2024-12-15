@@ -13,7 +13,10 @@
     />
     <SectionAbout class="about-sec" :title="home.banner_zagolovok" :items="home.banners" />
     <SectionBadges class="badges-sec" />
-    <SectionPhotos class="photos-sec" />
+    <SectionPhotos class="photos-sec"
+      :photoXl="home.grid.xl"
+      :photoSm="home.grid.sm"
+    />
     <SectionRestaurants class="rest-sec" />
     <SectionActivities class="activ-sec" />
     <SectionPromotions class="prom-sec" />
