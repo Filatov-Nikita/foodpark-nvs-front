@@ -6,10 +6,13 @@
       :spaceBetween="16"
       :slidesPerView="1"
       :breakpoints="{
-        800: {
+        '720.9': {
+          slidesPerView: 2,
           spaceBetween: 20,
+        },
+        '992.9': {
           slidesPerView: 3,
-        }
+        },
       }"
       @swiper="onSwiper"
       @slideChange="onSliderChange"
@@ -68,6 +71,11 @@
     text-align: center;
     font-weight: 500;
     font-size: 18px;
+
+    @include sm {
+      font-size: 16px;
+      padding: 40px 0;
+    }
   }
 
   .nav-actions {

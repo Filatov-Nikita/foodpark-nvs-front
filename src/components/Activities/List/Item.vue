@@ -45,6 +45,10 @@
 
   .body-wrap {
     margin-top: 20px;
+
+    @include sm {
+      margin-top: 12px;
+    }
   }
 
   .date {
@@ -58,5 +62,9 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1.3;
+
+    @include sm {
+      font-size: 16px;
+    }
   }
 </style>
