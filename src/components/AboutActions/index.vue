@@ -19,7 +19,7 @@
   });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .items {
     display: flex;
     flex-wrap: wrap;
@@ -29,5 +29,13 @@
   .action-item {
     width: calc(33.3% - 16px);
     margin: 8px;
+
+    @include md {
+      width: calc(50% - 16px);
+    }
+
+    @include sm {
+      width: calc(100% - 16px);
+    }
   }
 </style>

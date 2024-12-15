@@ -56,5 +56,10 @@
     font-size: 34px;
     line-height: 1.3;
     @apply tw-font-if-kica tw-font-semibold tw-text-white tw-uppercase;
+
+    @include sm {
+      font-size: 24px;
+      padding: 15px;
+    }
   }
 </style>
