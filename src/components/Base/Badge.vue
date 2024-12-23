@@ -40,6 +40,10 @@
     font-weight: 500;
     @apply tw-tracking-1;
 
+    @include sm {
+      font-size: 14px;
+    }
+
     &--filled {
       background-color: v-bind(color);
     }
