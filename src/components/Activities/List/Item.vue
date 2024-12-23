@@ -4,7 +4,7 @@
       <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" />
     </div>
     <div class="body-wrap">
-      <p class="date">{{ item.post_date }}</p>
+      <p class="date">{{ item.period }}</p>
       <h3 class="title">{{ item.post_title }}</h3>
     </div>
   </article>
