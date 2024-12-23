@@ -1,5 +1,5 @@
 <template>
-  <a class="item" href="#food">
+  <a class="item" :href="item.href">
     <div class="img-wrap">
       <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" loading="lazy" />
       <div class="name">{{ item.title }}</div>
