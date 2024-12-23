@@ -17,7 +17,7 @@
       :photoXl="home.grid.xl"
       :photoSm="home.grid.sm"
     />
-    <SectionRestaurants class="rest-sec" />
+    <SectionRestaurants class="rest-sec" :foodparkMapHref="home.foodpark_map_href" />
     <SectionActivities class="activ-sec" />
     <SectionPromotions class="prom-sec" />
     <SectionSubscribe class="subs-sec" :tgHref="home.ssylka_na_telegram" />
