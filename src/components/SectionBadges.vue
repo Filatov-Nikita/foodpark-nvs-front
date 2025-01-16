@@ -1,37 +1,68 @@
 <template>
-  <section id="badges" class="badges">
+  <section id="badges">
     <div class="wrapper">
-      <div class="rows" ref="rowsRef">
-        <div ref="row1Ref" class="row-items row1" :style="{ '--x': x1 + 'px' }">
+      <Swiper
+        class="slider slider1"
+        :modules="[ FreeMode, Autoplay ]"
+        loop
+        :autoplay="{
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        }"
+        freeMode
+        grabCursor
+        slidesPerView="auto"
+        :speed="10000"
+        :spaceBetween="20"
+      >
+        <SwiperSlide
+          class="slide"
+          v-for="item in row1Items"
+        >
           <BaseBadge
-            class="item"
-            v-for="item in row1Items"
             :textColor="item.textColor"
             :color="item.color"
             :design="item.design"
           >
             {{ item.text }}
           </BaseBadge>
-        </div>
-        <div ref="row2Ref" class="row-items row2" :style="{ '--x': x2 + 'px' }">
+        </SwiperSlide>
+      </Swiper>
+      <Swiper
+        class="slider"
+        :modules="[ FreeMode, Autoplay ]"
+        loop
+        :autoplay="{
+          delay: 0,
+          disableOnInteraction: false,
+          reverseDirection: false,
+        }"
+        freeMode
+        grabCursor
+        slidesPerView="auto"
+        :speed="13000"
+        :spaceBetween="20"
+      >
+        <SwiperSlide
+          class="slide"
+          v-for="item in row2Items"
+        >
           <BaseBadge
-            class="item"
-            v-for="item in row2Items"
             :textColor="item.textColor"
             :color="item.color"
             :design="item.design"
           >
             {{ item.text }}
           </BaseBadge>
-        </div>
-      </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   </section>
 </template>
 
 <script setup>
-  import useMoveBadges from '@/composables/useMoveBadges';
-  import { ref } from 'vue';
+  import { FreeMode, Autoplay } from 'swiper/modules';
 
   const colorBlack = '#222222';
   const colorWhite = '#ffffff';
@@ -149,35 +180,18 @@
       design: 'filled',
     },
   ];
-
-  const row1Ref = ref(null);
-  const row2Ref = ref(null);
-  const rowsRef = ref(null);
-
-  const { x1, x2 } = useMoveBadges(row1Ref, row2Ref, rowsRef);
 </script>
 
-<style scoped lang="scss">
-  .badges {
-    overflow: hidden;
+<style scoped>
+  .swiper-free-mode.slider > :deep(.swiper-wrapper) {
+    transition-timing-function: linear;
   }
 
-  .row-items {
-    width: max-content;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-
-    & + & {
-      margin-top: 30px;
-    }
+  .slider1 {
+    margin-bottom: 30px;
   }
 
-  .item {
-    flex-shrink: 0;
-  }
-
-  .row1, .row2 {
-    transform: translateX(var(--x));
+  .slide {
+    width: fit-content;
   }
 </style>
