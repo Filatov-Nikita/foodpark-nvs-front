@@ -3,7 +3,7 @@
     <Header :tgHref="tgHref" />
     <div class="wrapper">
       <div class="body">
-        <h1 class="h1 h1--red" v-html="titleHtml"></h1>
+        <h1 class="h1 h1--yellow" v-html="titleHtml"></h1>
         <p class="subtitle">{{ subtitle }}</p>
         <BaseButton class="btn" nativeLink href="#food">{{ btnTitle }}</BaseButton>
       </div>

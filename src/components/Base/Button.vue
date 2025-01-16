@@ -43,7 +43,7 @@
     }
 
     &:hover {
-      background-color: #d50080;
+      background-color: #de1e54;
     }
   }
 </style>

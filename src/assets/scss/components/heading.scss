@@ -18,9 +18,8 @@ h1, .h1 {
     font-size: 42px;
   }
 
-  &--red {
-    text-shadow: 0 1px 20px #ff9ed9;
-    @apply tw-text-white;
+  &--yellow {
+    @apply tw-text-yellow;
   }
 }
 
@@ -35,12 +34,6 @@ h2, .h2 {
   }
 
   &--red {
-    text-shadow: 0 1px 20px #ff9ed9;
     @apply tw-text-primary;
-  }
-
-  &--green {
-    text-shadow: 0 1px 20px #e8ff8e;
-    @apply tw-text-secondary;
   }
 }

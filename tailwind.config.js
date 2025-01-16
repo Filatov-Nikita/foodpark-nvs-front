@@ -7,11 +7,12 @@ export default {
   prefix: 'tw-',
   theme: {
     colors: {
-      primary: '#FE019A',
+      primary: '#FC225F',
       secondary: '#C0F000',
       dark: '#222222',
       gray: '#757575',
       white: '#FFFFFF',
+      yellow: '#FFFF00',
     },
     fontFamily: {
       'if-kica': [ 'if kica', 'Arial', 'sans-serif' ],
