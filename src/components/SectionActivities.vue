@@ -21,7 +21,7 @@
   const typesRes = await api.activities.types();
   const types = ref(typesRes);
 
-  const activeType = ref(types.value[2]?.term_id ?? null);
+  const activeType = ref(types.value[0]?.term_id ?? null);
 
   const elementsRes = await api.activities.elements(activeType.value);
   const elements = ref(elementsRes);
