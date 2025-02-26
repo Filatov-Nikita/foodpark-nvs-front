@@ -47,7 +47,7 @@
 <style scoped lang="scss">
   .main {
     position: relative;
-    min-height: 650px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
