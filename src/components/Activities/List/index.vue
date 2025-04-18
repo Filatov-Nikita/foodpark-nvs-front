@@ -3,6 +3,7 @@
     <p class="empty" v-if="items.length === 0">Пока нет ни одного события</p>
     <Swiper
       v-else
+      :key="k"
       :spaceBetween="16"
       :slidesPerView="1"
       :breakpoints="{
@@ -37,9 +38,9 @@
   import ListItem from './Item.vue';
   import NavBtn from '@/components/Base/NavBtn.vue';
   import useSwiperNav from '@/composables/useSwiperNav';
-  import { ref } from 'vue';
+  import { ref, watch } from 'vue';
 
-  defineProps({
+  const props = defineProps({
     items: {
       required: true,
       type: Array,
@@ -63,6 +64,12 @@
     swiper.value = swr;
     updateActions();
   }
+
+  const k = ref(0);
+
+  watch(() => props.items, () => {
+    k.value++;
+  });
 </script>
 
 <style scoped lang="scss">
