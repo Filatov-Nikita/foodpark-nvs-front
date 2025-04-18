@@ -57,8 +57,15 @@
     line-height: 1.3;
     @apply tw-font-if-kica tw-font-semibold tw-text-white tw-uppercase;
 
-    @include sm {
+    @include lg {
+      font-size: 28px;
+    }
+
+    @include lg {
       font-size: 24px;
+    }
+
+    @include sm {
       padding: 15px;
     }
   }

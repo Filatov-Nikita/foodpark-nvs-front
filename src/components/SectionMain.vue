@@ -83,7 +83,7 @@
   }
 
   .subtitle {
-    margin-top: 24px;
+    margin-top: 30px;
     font-size: 20px;
     line-height: 1.3;
     @apply tw-text-white;

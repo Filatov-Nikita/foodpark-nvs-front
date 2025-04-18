@@ -1,17 +1,17 @@
 @use '../mixins/screens.scss' as *;
 
 h1, .h1 {
-  font-size: 80px;
+  font-size: 120px;
   font-weight: 600;
-  line-height: 1.1;
-  @apply tw-tracking-1 tw-font-if-kica tw-uppercase;
+  line-height: 1;
+  @apply tw-tracking-1 tw-font-if-kica;
 
   @include lg {
-    font-size: 65px;
+    font-size: 90px;
   }
 
   @include md {
-    font-size: 50px;
+    font-size: 80px;
   }
 
   @include sm {

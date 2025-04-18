@@ -53,6 +53,10 @@
     @include sm {
       margin-bottom: 80px;
     }
+
+    @include sm {
+      margin-bottom: 50px;
+    }
   }
 
   .about-sec {
