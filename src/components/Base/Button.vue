@@ -61,6 +61,17 @@
       }
     }
 
+    &--white {
+      padding: 16px 30px;
+      font-weight: 500;
+      background-color: rgba(255, 255, 255, 0.8);
+      @apply tw-text-dark;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
     @include sm {
       padding: 12px 30px;
       font-size: 14px;

@@ -5,7 +5,22 @@
       <div class="body">
         <h1 class="h1 h1--yellow" v-html="titleHtml"></h1>
         <p class="subtitle">{{ subtitle }}</p>
-        <BaseButton class="btn" nativeLink href="#food">{{ btnTitle }}</BaseButton>
+        <div class="actions">
+          <BaseButton class="btn" nativeLink href="#food">{{ btnTitle }}</BaseButton>
+          <BaseButton class="btn" design="white" @click="showedModal = true">
+            О сладком рекорде
+          </BaseButton>
+        </div>
+        <BaseModal v-model="showedModal">
+          <div class="modal-video">
+            <div class="modal-head">
+              <button class="modal-close" @click="showedModal = false">
+                <IconClose class="tw-w-full tw-h-full" />
+              </button>
+            </div>
+            <video class="tw-w-full tw-h-auto" width="1920" height="1080" src="/videos/sweet-fest.mp4" controls></video>
+          </div>
+        </BaseModal>
       </div>
     </div>
     <video class="video" :src="video.url" autoplay muted loop></video>
@@ -13,8 +28,9 @@
 </template>
 
 <script setup>
-  import { computed } from 'vue';
+  import { computed, ref } from 'vue';
   import Header from './Header.vue';
+  import IconClose from './Icons/Close.vue';
 
   const props = defineProps({
     title: {
@@ -42,6 +58,8 @@
   const titleHtml = computed(() => {
     return props.title.replace('-', '&#8209;');
   });
+
+  const showedModal = ref(false);
 </script>
 
 <style scoped lang="scss">
@@ -99,12 +117,58 @@
   }
 
   .btn {
-    margin-top: 40px;
     width: 100%;
     max-width: 269px;
+  }
+
+  .actions {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 12px;
 
     @include sm {
       margin-top: 18px;
     }
+  }
+
+  .modal-video {
+    padding: 32px;
+    border-radius: 16px;
+    max-width: 70%;
+    width: 100%;
+    @apply tw-bg-white;
+
+    @include lg {
+      max-width: 800px;
+    }
+
+    @include md {
+      padding: 24px;
+    }
+
+    @include sm {
+      padding: 12px;
+    }
+  }
+
+  .modal-close {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    @apply tw-text-dark;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .modal-head {
+    text-align: right;
+    margin-bottom: 16px;
   }
 </style>
