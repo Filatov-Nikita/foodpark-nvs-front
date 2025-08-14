@@ -4,7 +4,7 @@
       <div class="wrap">
         <div class="col1">
           <a class="logo-wrap"href="/">
-            <img class="logo" width="119" height="39" src="@/assets/images/logo-trc.svg" alt="лого ТРЦ «Аура»" loading="lazy">
+            <img class="logo" width="137" height="42" src="@/assets/images/logo-trc.svg" alt="лого ТРЦ «Аура»" loading="lazy">
           </a>
           <div class="text name">ТРЦ «Аура»</div>
           <div class="text">{{ address }}</div>
@@ -143,10 +143,16 @@
   }
 
   .logo-wrap {
+    width: 137px;
     display: inline-block;
     margin-bottom: 35px;
 
+    @include md {
+      width: 120px;
+    }
+
     @include sm {
+      width: 110px;
       margin-bottom: 20px;
     }
   }
