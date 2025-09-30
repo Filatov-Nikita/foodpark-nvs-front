@@ -1,7 +1,7 @@
 <template>
   <section id="activities" class="activities">
     <div class="wrapper">
-      <h2 class="h2 h2--red tw-text-center">Мероприятия</h2>
+      <h2 class="h2 h2--secondary tw-text-center">Мероприятия</h2>
       <TypesList class="types-list" :items="types" :activeType="activeType" @change:type="activeType = $event" />
       <ActivitiesList class="event-list" :items="elements" @changed:item="onChangeItem" />
       <DetailedModal v-if="activeActivity" v-model="showedActivity" :activityId="activeActivity" />

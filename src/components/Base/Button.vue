@@ -46,18 +46,18 @@
       @apply tw-bg-primary tw-text-white;
 
       &:hover {
-        background-color: #de1e54;
+        background-color: #507344;
       }
     }
 
     &--bordered {
       padding: 15px 30px;
       font-weight: 400;
-      border: 1px solid #E8D8B5;
-      @apply tw-text-gray;
+      border: 1px solid #D4BF59;
+      @apply tw-text-dark;
 
       &:hover {
-        border-color: #b9ac91;
+        border-color: #9a8b40;
       }
     }
 

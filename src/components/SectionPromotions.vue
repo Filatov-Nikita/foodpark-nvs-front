@@ -1,7 +1,7 @@
 <template>
   <section id="promotions" class="promotions">
     <div class="wrapper">
-      <h2 class="h2 h2--red tw-text-center">Акции</h2>
+      <h2 class="h2 h2--secondary tw-text-center">Акции</h2>
       <PromotionsList class="prom-list" :items="promotions" />
     </div>
   </section>

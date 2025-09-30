@@ -1,7 +1,7 @@
 <template>
   <section id="food">
     <div class="wrapper">
-      <h2 class="h2 h2--red tw-text-center title">Кафе и рестораны</h2>
+      <h2 class="h2 h2--secondary tw-text-center title">Кафе и рестораны</h2>
       <RestaurantsList v-if="restaurants" :items="items" />
       <div class="actions">
         <BaseButton class="action" nativeLink :href="foodparkMapHref" target="_blank">Карта фуд-парка</BaseButton>

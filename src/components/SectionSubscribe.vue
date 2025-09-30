@@ -1,13 +1,13 @@
 <template>
   <section id="subscribe">
     <div class="wrapper">
-      <h2 v-if="!grid.lg" class="h2 h2--red title">Подписывайтесь на&nbsp;нас!</h2>
+      <h2 v-if="!grid.lg" class="h2 h2--primary title">Подписывайтесь на&nbsp;нас!</h2>
       <div class="wrap">
         <div class="round-wrap">
           <img class="round" width="311" height="310" src="@/assets/images/tg-round.svg" loading="lazy" />
         </div>
         <div class="body-wrap">
-          <h2 v-if="grid.lg" class="h2 h2--red title">Подписывайтесь на&nbsp;нас!</h2>
+          <h2 v-if="grid.lg" class="h2 h2--primary title">Подписывайтесь на&nbsp;нас!</h2>
           <p class="text">Не упустите ни одного события! Подписывайтесь на нас в соцсетях, чтобы быть в курсе всех новостей, акций и мероприятий Фуд-парка. Будем на одной волне!</p>
           <BaseButton v-if="grid.md" class="action" nativeLink :href="tgHref" target="_blank">
             Подписаться

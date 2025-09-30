@@ -1,7 +1,7 @@
 <template>
   <section id="about">
     <div class="wrapper">
-      <h2 class="h2 h2--red title tw-text-center">{{ title }}</h2>
+      <h2 class="h2 h2--primary title tw-text-center">{{ title }}</h2>
       <AboutActions class="actions" :items="items" />
     </div>
   </section>
