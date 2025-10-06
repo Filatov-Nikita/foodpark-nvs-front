@@ -9,19 +9,29 @@
             </div>
             <div class="nav">
               <div class="nav-wrap" @click="$emit('close')">
-                <a class="nav-link" href="#about">О нас</a>
+                <a class="nav-link" href="#about" @click.prevent="$scroll.onShowView">
+                  О нас
+                </a>
               </div>
               <div class="nav-wrap" @click="$emit('close')">
-                <a class="nav-link" href="#food">Кафе и рестораны</a>
+                <a class="nav-link" href="#food" @click.prevent="$scroll.onShowView">
+                  Кафе и рестораны
+                </a>
               </div>
               <div class="nav-wrap" @click="$emit('close')">
-                <a class="nav-link" href="#activities">Мероприятия</a>
+                <a class="nav-link" href="#activities" @click.prevent="$scroll.onShowView">
+                  Мероприятия
+                </a>
               </div>
               <div class="nav-wrap" @click="$emit('close')">
-                <a class="nav-link" href="#promotions">Акции</a>
+                <a class="nav-link" href="#promotions" @click.prevent="$scroll.onShowView">
+                  Акции
+                </a>
               </div>
               <div class="nav-wrap" @click="$emit('close')">
-                <a class="nav-link" href="#contacts">Контакты</a>
+                <a class="nav-link" href="#contacts" @click.prevent="$scroll.onShowView">
+                  Контакты
+                </a>
               </div>
             </div>
             <a class="btn" :href="tgHref" target="_blank">

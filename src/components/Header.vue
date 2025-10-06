@@ -3,16 +3,26 @@
     <div class="wrapper">
       <div v-if="grid.lg" class="wrap">
         <div class="nav">
-          <a class="link" href="#about">О нас</a>
-          <a class="link" href="#food">Кафе и рестораны</a>
+          <a class="link" href="#about" @click.prevent="$scroll.onShowView">
+            О нас
+          </a>
+          <a class="link" href="#food" @click.prevent="$scroll.onShowView">
+            Кафе и рестораны
+          </a>
         </div>
         <a class="logo-wrap" href="/">
           <img class="logo" width="250" height="64" src="@/assets/images/logo.svg" alt="лого фудпарка">
         </a>
         <div class="nav">
-          <a class="link" href="#activities">Мероприятия</a>
-          <a class="link" href="#promotions">Акции</a>
-          <a class="link" href="#contacts">Контакты</a>
+          <a class="link" href="#activities" @click.prevent="$scroll.onShowView">
+            Мероприятия
+          </a>
+          <a class="link" href="#promotions" @click.prevent="$scroll.onShowView">
+            Акции
+          </a>
+          <a class="link" href="#contacts" @click.prevent="$scroll.onShowView">
+            Контакты
+          </a>
         </div>
       </div>
       <div class="wrap" v-else>
