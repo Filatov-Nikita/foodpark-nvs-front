@@ -11,16 +11,16 @@
         url: home.video.url,
       }"
     />
-    <SectionAbout class="about-sec" :title="home.banner_zagolovok" :items="home.banners" />
+    <SectionAbout v-if="home" class="about-sec" :title="home.banner_zagolovok" :items="home.banners" />
     <SectionBadges class="badges-sec" />
-    <SectionPhotos class="photos-sec"
+    <SectionPhotos v-if="home" class="photos-sec"
       :photoXl="home.grid.xl"
       :photoSm="home.grid.sm"
     />
-    <SectionRestaurants class="rest-sec" :foodparkMapHref="home.foodpark_map_href" />
+    <SectionRestaurants v-if="home" class="rest-sec" :foodparkMapHref="home.foodpark_map_href" />
     <SectionActivities class="activ-sec" />
     <SectionPromotions class="prom-sec" />
-    <SectionSubscribe class="subs-sec" :tgHref="home.ssylka_na_telegram" />
+    <SectionSubscribe v-if="home" class="subs-sec" :tgHref="home.ssylka_na_telegram" />
     <Footer
       v-if="home"
       :phone="home.phone"
@@ -42,8 +42,11 @@
   import SectionPhotos from './SectionPhotos.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
+  import useRequest from '@/composables/useRequest';
 
-  const home = await api.home.show();
+  const { data: home } = await useRequest(api.home.show, {
+    errorMessage: 'Не удалось загрузить данные!'
+  });
 </script>
 
 <style scoped lang="scss">
