@@ -53,7 +53,7 @@
     &--bordered {
       padding: 15px 30px;
       font-weight: 400;
-      border: 1px solid #D4BF59;
+      border: 1px solid theme('colors.accent');
       @apply tw-text-dark;
 
       &:hover {

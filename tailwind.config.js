@@ -13,6 +13,8 @@ export default {
       gray: '#757575',
       white: '#FFFFFF',
       yellow: '#FDEB01',
+      accent: '#D4BF59',
+      base: '#F7F7F0',
     },
     fontFamily: {
       'if-kica': [ 'if kica', 'Arial', 'sans-serif' ],
