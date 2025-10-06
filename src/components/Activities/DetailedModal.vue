@@ -1,11 +1,14 @@
 <template>
   <BaseModal v-model="value">
-    <div class="card" v-if="data">
+    <div class="card">
       <div class="toolbar">
         <ButtonClose @click="value = false" />
       </div>
-      <div class="content">
-        <div class="img-wrap">
+      <div class="loader" v-if="loading">
+        <BaseSpinner size="100px"/>
+      </div>
+      <div v-else-if="data" class="content">
+        <div v-if="data.image" class="img-wrap">
           <img class="tw-w-full" :width="data.image.width" :height="data.image.height" :src="data.image.url" />
         </div>
         <p class="period">{{ data.period }}</p>
@@ -33,7 +36,7 @@
     default: false,
   });
 
-  const { data, send } = await useRequest(
+  const { data, loading, send } = await useRequest(
     () => api.activities.show(props.activityId),
     { immediate: false },
   );
@@ -52,7 +55,7 @@
     padding: 80px;
     padding-top: 40px;
     padding-right: 50px;
-    @apply tw-bg-white tw-w-full;
+    @apply tw-bg-base tw-w-full;
   }
 
   .img-wrap {
@@ -88,5 +91,10 @@
   .body {
     white-space: pre-wrap;
     @apply tw-tracking-1;
+  }
+
+  .loader {
+    text-align: center;
+    padding: 50px;
   }
 </style>

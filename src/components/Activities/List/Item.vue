@@ -1,6 +1,6 @@
 <template>
   <article class="item">
-    <div class="img-wrap" @click="$emit('changed:item')">
+    <div class="img-wrap" @click="$emit('show')">
       <img class="photo" :width="item.preview.width" :height="item.preview.height" :src="item.preview.url" />
     </div>
     <div class="body-wrap">
@@ -18,7 +18,7 @@
     }
   });
 
-  defineEmits([ 'changed:item' ]);
+  defineEmits([ 'show' ]);
 </script>
 
 <style scoped lang="scss">
