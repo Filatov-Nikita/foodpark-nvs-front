@@ -6,13 +6,16 @@ import BaseBadge from '@/components/Base/Badge.vue';
 import BaseModal from '@/components/Base/Modal.vue';
 import BaseSpinner from '@/components/Base/Spinner.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import Notifications from '@kyvg/vue3-notification';
 import VScroll from '@/plugins/scroll';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'animate.css';
 
 const app = createApp(App);
+
 app.use(VScroll);
+app.use(Notifications);
 
 app.component('BaseButton', BaseButton);
 app.component('BaseBadge', BaseBadge);
