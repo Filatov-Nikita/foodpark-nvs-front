@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kyvg/vue3-notification": "^3.4.1",
     "animate.css": "^4.1.1",
     "ky": "^1.7.2",
     "swiper": "^11.1.15",
