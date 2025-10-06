@@ -8,10 +8,13 @@
 </template>
 
 <script setup>
+  import useRequest from '@/composables/useRequest';
   import PromotionsList from './Promotions/List/index.vue';
   import api from '@/repositories';
 
-  const promotions = await api.promotions.all();
+  const { data: promotions } = await useRequest(api.promotions.all, {
+    errorMessage: 'Не удалось загрузить акции!',
+  });
 </script>
 
 <style scoped lang="scss">
