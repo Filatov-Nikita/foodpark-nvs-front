@@ -26,7 +26,15 @@
 
 <style scoped lang="scss">
   .item {
+    cursor: pointer;
 
+    &:hover .name {
+      @apply tw-text-secondary;
+    }
+
+    &:hover .photo {
+      transform: scale(1.1);
+    }
   }
 
   .img-wrap {
@@ -49,6 +57,7 @@
 
   .photo {
     width: 100%;
+    transition: transform 150ms;
   }
 
   .logo-wrap {

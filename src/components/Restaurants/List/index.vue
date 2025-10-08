@@ -5,6 +5,7 @@
       v-for="item in items"
       :key="item.id"
       :item="item"
+      @click="$emit('change:item', item.id)"
     />
   </div>
 </template>
@@ -18,6 +19,8 @@
       type: Array,
     }
   });
+
+  defineEmits([ 'change:item' ]);
 </script>
 
 <style scoped lang="scss">
