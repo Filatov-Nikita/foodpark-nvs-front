@@ -34,6 +34,7 @@
     line-height: 1.3;
     border-radius: 30px;
     border: 1px solid theme('colors.accent');
+    white-space: nowrap;
     @apply tw-tracking-1 tw-text-dark;
 
     &:hover {
