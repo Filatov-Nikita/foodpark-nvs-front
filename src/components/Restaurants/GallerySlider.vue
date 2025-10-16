@@ -45,9 +45,17 @@
 </script>
 
 <style scoped lang="scss">
-    .photo {
+  .photo {
     width: 100%;
     border-radius: 40px;
+
+    @include md {
+      border-radius: 24px;
+    }
+
+    @include sm {
+      border-radius: 16px;
+    }
   }
 
   .nav-btn {

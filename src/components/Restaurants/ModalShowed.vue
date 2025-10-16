@@ -13,6 +13,7 @@
           <p v-if="data.kitchen" class="category-name">
             {{ data.kitchen.name }}
           </p>
+          <GallerySlider v-if="!grid.lg && data.gallery.length > 0" :images="data.gallery" />
           <div class="body" v-html="data.body"></div>
           <div class="menu-wrap" v-if="data.menu">
             <BaseButton class="menu-btn" nativeLink :href="data.menu" target="_blank">
@@ -20,7 +21,7 @@
             </BaseButton>
           </div>
         </div>
-        <div class="right" v-if="data.gallery.length > 0">
+        <div class="right" v-if="grid.lg && data.gallery.length > 0">
           <GallerySlider :images="data.gallery" />
         </div>
       </div>
@@ -34,6 +35,7 @@
   import useRequest from '@/composables/useRequest';
   import ButtonClose from '@/components/Base/ButtonClose.vue';
   import GallerySlider from './GallerySlider.vue';
+  import useAppGrid from '@/composables/useAppGrid';
 
   const props = defineProps({
     restaurantId: {
@@ -45,6 +47,8 @@
   const value = defineModel({
     default: false,
   });
+
+  const grid = useAppGrid();
 
   const { data, loading, send } = await useRequest(
     () => api.restaurants.show(props.restaurantId),
@@ -64,6 +68,14 @@
     max-width: 100%;
     padding: 40px 30px 80px;
     @apply tw-bg-base tw-w-full;
+
+    @include md {
+      padding: 30px;
+    }
+
+    @include sm {
+      padding: 20px 16px 30px;
+    }
   }
 
   .title {
@@ -72,12 +84,29 @@
     line-height: 1.3;
     margin-bottom: 10px;
     @apply tw-tracking-1;
+
+    @include md {
+      font-size: 36px;
+    }
+
+    @include sm {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
   }
 
   .category-name {
     font-size: 16px;
     line-height: 1.3;
     @apply tw-tracking-1 tw-text-gray;
+
+    @include md {
+      margin-bottom: 32px;
+    }
+
+    @include sm {
+      margin-bottom: 24px;
+    }
   }
 
   .toolbar {
@@ -91,6 +120,14 @@
     line-height: 1.3;
     white-space: pre-wrap;
     @apply tw-tracking-1;
+
+    @include md {
+      margin-top: 30px;
+    }
+
+    @include sm {
+      margin-top: 20px;
+    }
   }
 
   .content {
@@ -100,6 +137,11 @@
     --left-w: 40%;
     --right-w: 60%;
     margin-left: calc(var(--gap-x) * -1);
+
+    @include md {
+      --left-w: 100%;
+      --gap-x: 0px;
+    }
   }
 
   .left {
@@ -115,11 +157,23 @@
 
   .menu-wrap {
     margin-top: 60px;
+
+    @include md {
+      margin-top: 40px;
+    }
+
+    @include sm {
+      margin-top: 32px;
+    }
   }
 
   .menu-btn {
     width: 100%;
     max-width: 220px;
+
+    @include sm {
+      max-width: 100%;
+    }
   }
 
   .loader {
