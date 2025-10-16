@@ -20,6 +20,7 @@
     <SectionRestaurants v-if="home" class="rest-sec" :foodparkMapHref="home.foodpark_map_href" />
     <SectionActivities class="activ-sec" />
     <SectionPromotions class="prom-sec" />
+    <SectionBlog class="blog-sec" />
     <SectionSubscribe v-if="home" class="subs-sec" :tgHref="home.ssylka_na_telegram" />
     <Footer
       v-if="home"
@@ -40,6 +41,7 @@
   import SectionPromotions from './SectionPromotions.vue';
   import SectionActivities from './SectionActivities.vue';
   import SectionPhotos from './SectionPhotos.vue';
+  import SectionBlog from './SectionBlog.vue';
   import Footer from './Footer.vue';
   import api from '@/repositories';
   import useRequest from '@/composables/useRequest';
@@ -79,7 +81,7 @@
   }
 
   .subs-sec {
-    margin-bottom: 180px;
+    margin-bottom: 130px;
 
     @include sm {
       margin-bottom: 40px;
@@ -87,7 +89,7 @@
   }
 
   .badges-sec {
-    margin-bottom: 100px;
+    margin-bottom: 140px;
 
     @include sm {
       margin-bottom: 50px;
@@ -95,7 +97,7 @@
   }
 
   .prom-sec {
-    margin-bottom: 170px;
+    margin-bottom: 180px;
 
     @include sm {
       margin-bottom: 80px;
@@ -103,7 +105,7 @@
   }
 
   .activ-sec {
-    margin-bottom: 150px;
+    margin-bottom: 180px;
 
     @include sm {
       margin-bottom: 80px;
@@ -115,6 +117,14 @@
 
     @include sm {
       margin-bottom: 80px;
+    }
+  }
+
+  .blog-sec {
+    margin-bottom: 130px;
+
+    @include sm {
+      margin-bottom: 90px;
     }
   }
 </style>
