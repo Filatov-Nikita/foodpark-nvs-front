@@ -6,7 +6,9 @@
         <h1 class="h1 h1--yellow" v-html="titleHtml"></h1>
         <p class="subtitle">{{ subtitle }}</p>
         <div class="actions">
-          <BaseButton class="btn" nativeLink href="#food">{{ btnTitle }}</BaseButton>
+          <BaseButton class="btn" nativeLink href="#food" @click.prevent="$scroll.onShowView">
+            {{ btnTitle }}
+          </BaseButton>
           <BaseButton class="btn" design="white" @click="showedModal = true">
             О сладком рекорде
           </BaseButton>
