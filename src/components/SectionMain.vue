@@ -25,7 +25,18 @@
         </BaseModal>
       </div>
     </div>
-    <video class="video" :src="video.url" autoplay muted loop></video>
+    <video class="video" :poster="video.poster_url" muted loop autoplay playsinline>
+      <source
+        v-if="video.webm_url"
+        :src="video.webm_url"
+        type="video/webm"
+      />
+      <source
+        :src="video.url"
+        type="video/mp4"
+      />
+    </video>
+
   </div>
 </template>
 

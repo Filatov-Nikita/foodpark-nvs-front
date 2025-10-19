@@ -7,9 +7,7 @@
       :subtitle="home.podzagolovok"
       :btnTitle="home.tekst_na_knopke"
       :tgHref="home.ssylka_na_telegram"
-      :video="{
-        url: home.video.url,
-      }"
+      :video="home.video"
     />
     <SectionAbout v-if="home" class="about-sec" :title="home.banner_zagolovok" :items="home.banners" />
     <SectionBadges class="badges-sec" />
