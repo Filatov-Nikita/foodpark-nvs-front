@@ -33,6 +33,7 @@
           <div class="text">{{ workTime }}</div>
           <div class="soc-items">
             <a class="soc-item" :href="tgHref" target="_blank">
+              <BaseIcon name="social-tg" fit />
               <TelegramRound />
             </a>
           </div>
@@ -43,8 +44,6 @@
 </template>
 
 <script setup>
-  import TelegramRound from './Icons/TelegramRound.vue';
-
   defineProps({
     address: {
       required: true,

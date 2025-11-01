@@ -17,7 +17,7 @@
           <div class="modal-video">
             <div class="modal-head">
               <button class="modal-close" @click="showedModal = false">
-                <IconClose class="tw-w-full tw-h-full" />
+                <BaseIcon name="close" fit />
               </button>
             </div>
             <video class="tw-w-full tw-h-auto" width="1920" height="1080" src="/videos/sweet-fest.mp4" controls></video>
@@ -43,7 +43,6 @@
 <script setup>
   import { computed, ref } from 'vue';
   import Header from './Header.vue';
-  import IconClose from './Icons/Close.vue';
 
   const props = defineProps({
     title: {

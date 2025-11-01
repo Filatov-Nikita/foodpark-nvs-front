@@ -36,7 +36,7 @@
             </div>
             <a class="btn" :href="tgHref" target="_blank">
               <span>Мы в Telegram</span>
-              <IconTelegram class="btn__icon" />
+              <BaseIcon class="btn__icon" name="plain" />
             </a>
           </div>
         </div>
@@ -47,7 +47,6 @@
 
 <script setup>
   import ButtonClose from './Base/ButtonClose.vue';
-  import IconTelegram from './Icons/Telegram.vue';
 
   defineProps({
     showed: {

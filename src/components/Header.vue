@@ -30,7 +30,7 @@
           <img class="logo" width="250" height="64" src="@/assets/images/logo.svg" alt="лого фудпарка">
         </a>
         <button class="btn-burger" @click="showed = !showed">
-          <IconBurger />
+          <BaseIcon name="menu" fit />
         </button>
       </div>
     </div>
@@ -41,7 +41,6 @@
 <script setup>
   import NavMobile from './NavMobile.vue';
   import useAppGrid from '@/composables/useAppGrid';
-  import IconBurger from '@/components/Icons/Burger.vue';
   import { ref } from 'vue';
 
   defineProps({
