@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
+import path from 'path';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 
 // https://vite.dev/config/
@@ -21,6 +23,12 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+      customDomId: '__svg__icons__dom__',
+      inject: 'body-last',
+      symbolId: 'icon-[dir]-[name]',
+    }),
     ViteEjsPlugin({
       title: 'Новый Фуд‑Парк | Аура Новосибирск',
       description: '18 кухонь мира в самом сердце Новосибирска! Вкус, живая музыка, детская площадка и мастер-классы —место, где рождается атмосфера!',
