@@ -7,7 +7,8 @@
             <img class="logo" width="137" height="42" src="@/assets/images/logo-trc.svg" alt="лого ТРЦ «Аура»" loading="lazy">
           </a>
           <div class="text name">ТРЦ «Аура»</div>
-          <div class="text">{{ address }}</div>
+          <div class="text address">{{ address }}</div>
+          <div class="text">4 этаж</div>
         </div>
         <div class="col2">
           <nav class="nav">
@@ -30,7 +31,7 @@
         </div>
         <div class="col3">
           <a class="link phone" :href="`tel:${phone}`">{{ phone }}</a>
-          <div class="text">{{ workTime }}</div>
+          <div class="text time">{{ workTime }}</div>
           <div class="soc-items">
             <a class="soc-item" :href="tgHref" target="_blank">
               <BaseIcon name="social-tg" fit />
@@ -162,7 +163,7 @@
     }
   }
 
-  .name, .phone {
+  .name, .phone, .address, .time {
     margin-bottom: 16px;
 
     @include sm {
@@ -177,11 +178,6 @@
   .soc-items {
     display: flex;
     gap: 12px;
-    margin-top: 16px;
-
-    @include sm {
-      margin-top: 12px;
-    }
   }
 
   .soc-item {
