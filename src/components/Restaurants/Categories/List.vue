@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-x tw-w-full tw-max-w-full">
+  <div class="scroll-x tw-w-full tw-max-w-full tw-pb-2">
     <div class="items">
       <CategoryItem
         v-for="item in items"
