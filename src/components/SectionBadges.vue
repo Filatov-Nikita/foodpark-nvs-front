@@ -112,14 +112,14 @@
     },
     {
       text: 'Вкусная еда',
-      color: '#E85E4B',
-      textColor: colorWhite,
-      design: 'filled',
+      color: '#131212',
+      textColor: colorBlack,
+      design: 'outlined',
     },
     {
       text: 'Семейные обеды',
-      color: '#FF44B5',
-      textColor: colorWhite,
+      color: '#E6EBCE',
+      textColor: colorBlack,
       design: 'filled',
     },
   ];
@@ -133,7 +133,7 @@
     },
     {
       text: 'Разнообразная кухня',
-      color: '#EB8509',
+      color: '#659256',
       textColor: colorWhite,
       design: 'filled',
     },
