@@ -4,7 +4,7 @@
       <h2 class="h2 h2--secondary tw-text-center title">Больше о Фуд-Парке</h2>
       <BlogList v-if="items" :items="items" />
       <div class="link-wrap">
-        <a class="list-link" href="https://dzen.ru/foodparkaura?tab=articles" target="_blank">
+        <a class="list-link" :href="dzenHref" target="_blank">
           Смотреть все статьи
         </a>
       </div>
@@ -17,6 +17,13 @@
   import api from '@/repositories';
   import useRequest from '@/composables/useRequest';
   import { computed } from 'vue';
+
+  defineProps({
+    dzenHref: {
+      required: true,
+      type: String,
+    }
+  });
 
   const { data } = await useRequest(api.blog.all, {
     errorMessage: 'Не удалось загрузить блог!'

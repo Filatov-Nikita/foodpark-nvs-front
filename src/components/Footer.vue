@@ -34,7 +34,9 @@
           <div class="soc-items">
             <a class="soc-item" :href="tgHref" target="_blank">
               <BaseIcon name="social-tg" fit />
-              <TelegramRound />
+            </a>
+            <a class="soc-item" :href="dzenHref" target="_blank">
+              <BaseIcon name="social-dzen" fit />
             </a>
           </div>
         </div>
@@ -50,6 +52,10 @@
       type: String,
     },
     tgHref: {
+      required: true,
+      type: String,
+    },
+    dzenHref: {
       required: true,
       type: String,
     },
@@ -169,6 +175,8 @@
   }
 
   .soc-items {
+    display: flex;
+    gap: 12px;
     margin-top: 16px;
 
     @include sm {
@@ -177,8 +185,11 @@
   }
 
   .soc-item {
-    display: block;
     width: 32px;
     height: 32px;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 </style>

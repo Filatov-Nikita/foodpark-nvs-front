@@ -18,13 +18,14 @@
     <SectionRestaurants v-if="home" class="rest-sec" :foodparkMapHref="home.foodpark_map_href" />
     <SectionActivities class="activ-sec" />
     <SectionPromotions class="prom-sec" />
-    <SectionBlog class="blog-sec" />
+    <SectionBlog class="blog-sec" :dzenHref="home.ssylka_na_dzen" />
     <SectionSubscribe v-if="home" class="subs-sec" :tgHref="home.ssylka_na_telegram" />
     <Footer
       v-if="home"
       :phone="home.phone"
       :address="home.address"
       :tgHref="home.ssylka_na_telegram"
+      :dzenHref="home.ssylka_na_dzen"
       :workTime="home.vremya_raboty"
     />
   </main>
