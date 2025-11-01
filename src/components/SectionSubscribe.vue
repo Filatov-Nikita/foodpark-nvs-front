@@ -4,7 +4,10 @@
       <h2 v-if="!grid.lg" class="h2 h2--primary title">Подписывайтесь на&nbsp;нас!</h2>
       <div class="wrap">
         <div class="round-wrap">
-          <img class="round" width="311" height="310" src="@/assets/images/tg-round.svg" loading="lazy" />
+          <img class="round" width="620" height="620" src="@/assets/images/tg-round.svg" loading="lazy" />
+          <div class="anim-wrap">
+            <img class="anim-img" width="340" height="340" src="@/assets/images/foodpark.gif" loading="lazy" />
+          </div>
         </div>
         <div class="body-wrap">
           <h2 v-if="grid.lg" class="h2 h2--primary title">Подписывайтесь на&nbsp;нас!</h2>
@@ -91,16 +94,37 @@
   }
 
   .round-wrap {
+    position: relative;
     flex-basis: 310px;
-    animation-name: roundFrames;
-    animation-duration: 35s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 
     @include xs {
       flex-grow: 1;
       flex-basis: 128px;
     }
+  }
+
+  .round {
+    width: 100%;
+    animation-name: roundFrames;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .anim-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .anim-img {
+    width: 54%;
   }
 
   .body-wrap {
